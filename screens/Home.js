@@ -1,10 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native'
-
-const Home = () => {
+import { StyleSheet, Text, View, Button } from 'react-native'
+const Home = ({navigation}) => {
+  // console.log(props)
+   const handlePressY= () =>{
+             navigation.push('Notes')
+    }
+    const handlePress= () =>{
+             navigation.push('Form')
+    }
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
+      <Text style={styles.text}>Home</Text>
+      <Button onPress={handlePressY} title='My Notes'/>
+      <Button onPress={handlePress} title='Add notes'/>
     </View>
+
   )
 }
 
@@ -20,5 +29,6 @@ const styles = StyleSheet.create({
     text:{
       fontFamily:  'Montserrat_100Thin',
       fontSize: 13,
+      color: '#fff',
     }
 })

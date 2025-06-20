@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 
-const Form = () => {
+const Notes = () => {
   return (
     <View style={styles.container}>
-      <Text>Form</Text>
+      <Text style={styles.text}>My Notes</Text>
     </View>
   )
 }
 
-export default Form
+export default Notes
 
 const styles = StyleSheet.create({
     container:{
@@ -18,6 +18,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     text:{
-
+      fontFamily:  'Montserrat_100Thin',
+      fontSize: 13,
+      color: '#fff',
     }
 })
