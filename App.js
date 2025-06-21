@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import Home from './screens/Home'; 
 import Form from './screens/Form'; 
-import Infos from './screens/Notes'; 
+import Notes from './screens/Notes';
 
 
 import { useFonts } from 'expo-font';
@@ -15,7 +15,6 @@ import {
   Montserrat_500Medium_Italic,
   Montserrat_600SemiBold_Italic,
 } from '@expo-google-fonts/montserrat';
-import Notes from './screens/Notes';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -38,7 +37,7 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name='Home' component={Home}/>
         <Stack.Screen name='Form' component={Form}/>
         <Stack.Screen name='Notes' component={Notes}/>
