@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
+import Formula from './components/Formula'
 
 const Form = () => {
   return (
     <View style={styles.container}>
-      <Text>Form</Text>
+      <Formula/>
     </View>
   )
 }
